@@ -1,0 +1,168 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[panelCB]
+Class="Function"
+Prototype="int panelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[panelTIMM]
+Class="Function"
+Prototype="int panelTIMM(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[panelREFR]
+Class="Function"
+Prototype="int panelREFR(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[panelDEV]
+Class="Function"
+Prototype="int panelDEV(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[panelADM]
+Class="Function"
+Prototype="int panelADM(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[menuSave]
+Class="Function"
+Prototype="void menuSave(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuPrint]
+Class="Function"
+Prototype="void menuPrint(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuAverage]
+Class="Function"
+Prototype="void menuAverage(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuCalRefraction]
+Class="Function"
+Prototype="void menuCalRefraction(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuTimingSet]
+Class="Function"
+Prototype="void menuTimingSet(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuDevOpin]
+Class="Function"
+Prototype="void menuDevOpin(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuRegister]
+Class="Function"
+Prototype="void menuRegister(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[OneClickMode]
+Class="Function"
+Prototype="int OneClickMode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickContinue]
+Class="Function"
+Prototype="int OneClickContinue(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickHoldMeas]
+Class="Function"
+Prototype="int OneClickHoldMeas(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickSingleSweep]
+Class="Function"
+Prototype="int OneClickSingleSweep(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickTimingMea]
+Class="Function"
+Prototype="int OneClickTimingMea(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickCal]
+Class="Function"
+Prototype="int OneClickCal(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickClear]
+Class="Function"
+Prototype="int OneClickClear(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[AdminEXIT]
+Class="Function"
+Prototype="int AdminEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[calRefractionEXIT]
+Class="Function"
+Prototype="int calRefractionEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[timingMeaEXIT]
+Class="Function"
+Prototype="int timingMeaEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickAdmOK]
+Class="Function"
+Prototype="int OneClickAdmOK(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickDevOK]
+Class="Function"
+Prototype="int OneClickDevOK(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ConvertLength]
+Class="Function"
+Prototype="int ConvertLength(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OneClickRange]
+Class="Function"
+Prototype="int OneClickRange(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[menuHelp]
+Class="Function"
+Prototype="void menuHelp(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuAbout]
+Class="Function"
+Prototype="void menuAbout(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[SaveData]
+Class="Function"
+Prototype="void SaveData();"
+
+[DisplayRS232Error]
+Class="Function"
+Prototype="void DisplayRS232Error(int RS232Error);"
+
+[DispXstopMsg]
+Class="Function"
+Prototype="void DispXstopMsg();"
+
+[PlotResponse]
+Class="Function"
+Prototype="void PlotResponse(int sweep_type, double mean_amp, double fiber_length, double range);"
+
+[SetPrecision_D]
+Class="Function"
+Prototype="double SetPrecision_D(int choice, double X);"
+
+[ConvertUnit_M]
+Class="Function"
+Prototype="double ConvertUnit_M(int choice, double X);"
+
+[ConvertUnit_MS]
+Class="Function"
+Prototype="double ConvertUnit_MS(int choice, double X);"
+
+[ConvertPrecision_D]
+Class="Function"
+Prototype="void ConvertPrecision_D(int choice);"
+
+[PowerCaution]
+Class="Function"
+Prototype="void PowerCaution(int comPort, double mean_amp);"
+
+[GetProbTime]
+Class="Function"
+Prototype="void GetProbTime();"
+
+[OpenAPP]
+Class="Function"
+Prototype="void OpenAPP(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[TransENG]
+Class="Function"
+Prototype="void TransENG(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[TransCHN]
+Class="Function"
+Prototype="void TransCHN(int menuBar, int menuItem, void *callbackData, int panel);"
+

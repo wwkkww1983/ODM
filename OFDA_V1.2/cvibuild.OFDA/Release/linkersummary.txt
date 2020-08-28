@@ -1,0 +1,10 @@
+OFDA.obj
+cvistart.lib
+cvi.lib
+analysis.lib
+visa.lib
+kernel32.lib
+user32.lib
+EXE Symbol Module
+Exports Module
+Resource Module

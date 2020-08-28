@@ -1,0 +1,44 @@
+[GetInstrCom]
+Class="Function"
+Prototype="int GetInstrCom(int *comPort);"
+
+[ReadTemp]
+Class="Function"
+Prototype="int ReadTemp(int comPort, char *temp_data);"
+
+[ReadIL]
+Class="Function"
+Prototype="int ReadIL(int comPort, char *IL_data);"
+
+[SetOS1]
+Class="Function"
+Prototype="int SetOS1(int comPort, int OSstatus);"
+
+[SetOS2]
+Class="Function"
+Prototype="int SetOS2(int comPort, int OSstatus);"
+
+[Sendbyte]
+Class="Function"
+Prototype="int Sendbyte(int comPort, int sendByte);"
+
+[ReadLD1]
+Class="Function"
+Prototype="int ReadLD1(int comPort, int *LDstatus);"
+
+[ReadLD2]
+Class="Function"
+Prototype="int ReadLD2(int comPort, int *LDstatus);"
+
+[CautionLight]
+Class="Function"
+Prototype="int CautionLight(int comPort, int sendByte);"
+
+[ReadOS1]
+Class="Function"
+Prototype="int ReadOS1(int comPort, int *OSstatus);"
+
+[ReadOS2]
+Class="Function"
+Prototype="int ReadOS2(int comPort, int *OSstatus);"
+

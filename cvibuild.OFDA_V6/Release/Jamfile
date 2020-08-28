@@ -1,0 +1,65 @@
+HDRS = 	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\activex\\word"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\activex\\excel"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\custctrl"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\custctrl\\custsupp"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\cvirtsup"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\datasock"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\daqUtil"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\printing"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\toolbox"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\reportgen"
+	"d:\\toolkit\\national instruments\\cvi2017\\toolslib\\localui"
+	"d:\\toolkit\\national instruments\\cvi2017\\instr"
+	"D:\\ToolKit\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"D:\\ToolKit\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"D:\\ToolKit\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2017\\instr"
+	"d:\\toolkit\\national instruments\\cvi2017\\include"
+	"D:\\ToolKit\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2017\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"d:\\toolkit\\national instruments\\cvi2017\\include\\ansi"
+	"d:\\toolkit\\national instruments\\cvi2017\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"D:\\ToolKit\\National Instruments\\VISA\\winnt\\include"
+	"D:\\ToolKit\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"d:\\ToolKit\\National Instruments\\CVI2017\\bin"
+	"c:\\ProgramData\\National Instruments\\CVI2017\\bin"
+	"d:\\ToolKit\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "constant.h" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "Device.c" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "Device.h" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "DSP.c" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "DSP.h" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "OFDA.h" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "OFDA_main.c" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "TRVNA.c" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+LOCATE on "TRVNA.h" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制" ;
+Object "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\Device.c" ;
+FILENUM on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj" = 1 ;
+DEFPROTS on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj.cvidefprots" ;
+OUTFILE on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj.out" ;
+PrjObjects += "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\Device.obj" ;
+Object "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\DSP.c" ;
+FILENUM on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj" = 2 ;
+DEFPROTS on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj.cvidefprots" ;
+OUTFILE on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj.out" ;
+PrjObjects += "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\DSP.obj" ;
+Object "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\OFDA_main.c" ;
+FILENUM on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj" = 3 ;
+DEFPROTS on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj.cvidefprots" ;
+OUTFILE on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj.out" ;
+PrjObjects += "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_main.obj" ;
+Object "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\TRVNA.c" ;
+FILENUM on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj" = 4 ;
+DEFPROTS on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj.cvidefprots" ;
+OUTFILE on "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj" = "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj.out" ;
+PrjObjects += "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\TRVNA.obj" ;
+Object "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\resources.res" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\resources.in.rc" ;
+Depends "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\resources.res" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\manifest.xml" ;
+MainFromObjects "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_V6.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_V6.exe" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\link_options.txt" ;
+Depends "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_V6.exe" : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\resources.res" ;
+Depends all : "d:\\WorkProject\\614项目\\ODM\\OFDA_V6_2 - 无限制\\cvibuild.OFDA_V6\\Release\\OFDA_V6.exe" ;

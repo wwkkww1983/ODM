@@ -1,0 +1,247 @@
+[Workspace Header]
+Version = 1700
+Pathname = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA_V6.cws"
+CVI Dir = "/d/toolkit/national instruments/cvi2017"
+CVI Shared Dir = "/D/ToolKit/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2017"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/D/ToolKit/National Instruments/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "OFDA_V6.prj"
+Drag Bar Left = 160
+Window Top = 148
+Window Left = 77
+Window Bottom = 701
+Window Right = 960
+Maximized = False
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 5
+Window Confinement Region Enabled = True
+MainColumnWidth = 143
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1700
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 0
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/d/ToolKit/National Instruments/CVI2017/toolslib/custctrl/pwctrl.fp"
+File Type = "Function Panel"
+Disk Date = 3573565200
+In Projects = "1,"
+
+[File 0002]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA_main.c"
+File Type = "CSource"
+Disk Date = 3681462415
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Window Z-Order = 1
+Source Window State = "1,694,694,694,35,36,36,0,0,224,0,324,0,0,0,57,0,0,8,16,323,517,1,16,"
+
+[File 0003]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/TRVNA.c"
+File Type = "CSource"
+Disk Date = 3681455271
+In Projects = "1,"
+Window Top = 38
+Window Left = 10
+Window Z-Order = 5
+Source Window State = "1,48,48,48,4,17,17,0,3,80,0,0,0,0,0,25,30,0,48,4,323,517,1,0,"
+
+[File 0004]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/Device.c"
+File Type = "CSource"
+Disk Date = 3681455209
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 4
+Source Window State = "1,138,138,138,19,23,19,0,0,80,0,0,0,0,0,25,100,0,140,30,323,517,1,0,"
+
+[File 0005]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA_V6.uir"
+File Type = "User Interface Resource"
+Disk Date = 3681453712
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Height = 323
+Window Width = 517
+Window Z-Order = 2
+
+[File 0006]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA.h"
+File Type = "Include"
+Disk Date = 3681455238
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 3
+Source Window State = "1,0,0,0,0,0,0,0,0,94,0,0,0,0,0,25,21,0,31,55,323,601,1,0,"
+
+[File 0007]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/constant.h"
+File Type = "Include"
+Disk Date = 3681455203
+In Projects = "1,"
+Window Top = 33
+Window Left = -63
+Source Window State = "1,17,22,17,0,12,0,0,0,0,0,0,0,0,0,0,0,0,12,25,323,517,1,19,"
+
+[File 0008]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/Device.h"
+File Type = "Include"
+Disk Date = 3681454597
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Source Window State = "1,10,49,49,0,41,41,0,0,0,0,0,0,0,0,0,0,0,20,59,323,517,1,0,"
+
+[File 0009]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/DSP.h"
+File Type = "Include"
+Disk Date = 3681455230
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0010]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/TRVNA.h"
+File Type = "Include"
+Disk Date = 3681455281
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,35,27,323,517,1,0,"
+
+[File 0011]
+Path = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/DSP.c"
+File Type = "CSource"
+Disk Date = 3681455226
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Source Window State = "1,48,48,48,35,51,35,0,3,0,0,0,0,0,0,0,18,0,48,51,323,601,1,0,"
+
+[Tab Order]
+Tab 0001 = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA_V6.uir"
+Tab 0002 = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/TRVNA.c"
+Tab 0003 = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/Device.c"
+Tab 0004 = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA.h"
+Tab 0005 = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/OFDA_main.c"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+
+[Distributions]
+Active Index = 1
+AbsCDSPath 0001 = "/d/WorkProject/614项目/ODM/OFDA_V6_2 - 无限制/ODM_v6.cds"
+RelCDSPath 0001 = "ODM_v6.cds"
+

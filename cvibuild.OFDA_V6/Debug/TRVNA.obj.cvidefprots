@@ -1,0 +1,28 @@
+[ConnectVNA]
+Class="Function"
+Prototype="int ConnectVNA();"
+
+[DisconnectVNA]
+Class="Function"
+Prototype="int DisconnectVNA();"
+
+[IniVNA]
+Class="Function"
+Prototype="int IniVNA();"
+
+[CalVNA]
+Class="Function"
+Prototype="int CalVNA(int Enable);"
+
+[GetInfoVNA]
+Class="Function"
+Prototype="int GetInfoVNA(int *NOP, double *SweepTime);"
+
+[TrigVNA]
+Class="Function"
+Prototype="int TrigVNA();"
+
+[ReadData]
+Class="Function"
+Prototype="int ReadData(int NOP, double *freq, double *amp, double *pha);"
+
