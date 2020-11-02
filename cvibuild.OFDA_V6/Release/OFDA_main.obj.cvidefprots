@@ -34,6 +34,10 @@ Prototype="void menuPrint(int menuBar, int menuItem, void *callbackData, int pan
 Class="Function"
 Prototype="void menuAverage(int menuBar, int menuItem, void *callbackData, int panel);"
 
+[menuOpenAPP]
+Class="Function"
+Prototype="void menuOpenAPP(int menuBar, int menuItem, void *callbackData, int panel);"
+
 [menuCalRefraction]
 Class="Function"
 Prototype="void menuCalRefraction(int menuBar, int menuItem, void *callbackData, int panel);"
@@ -41,6 +45,22 @@ Prototype="void menuCalRefraction(int menuBar, int menuItem, void *callbackData,
 [menuTimingSet]
 Class="Function"
 Prototype="void menuTimingSet(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuTransCHN]
+Class="Function"
+Prototype="void menuTransCHN(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuTransENG]
+Class="Function"
+Prototype="void menuTransENG(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuHelp]
+Class="Function"
+Prototype="void menuHelp(int menuBar, int menuItem, void *callbackData, int panel);"
+
+[menuAbout]
+Class="Function"
+Prototype="void menuAbout(int menuBar, int menuItem, void *callbackData, int panel);"
 
 [menuDevOpin]
 Class="Function"
@@ -78,17 +98,17 @@ Prototype="int OneClickCal(int panel, int control, int event, void *callbackData
 Class="Function"
 Prototype="int OneClickClear(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
-[AdminEXIT]
+[OneClickAdminEXIT]
 Class="Function"
-Prototype="int AdminEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+Prototype="int OneClickAdminEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
-[calRefractionEXIT]
+[OneClickCalRefractionOK]
 Class="Function"
-Prototype="int calRefractionEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+Prototype="int OneClickCalRefractionOK(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
-[timingMeaEXIT]
+[OneClickTimingSetOK]
 Class="Function"
-Prototype="int timingMeaEXIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+Prototype="int OneClickTimingSetOK(int panTel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
 [OneClickAdmOK]
 Class="Function"
@@ -98,71 +118,55 @@ Prototype="int OneClickAdmOK(int panel, int control, int event, void *callbackDa
 Class="Function"
 Prototype="int OneClickDevOK(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
-[ConvertLength]
+[OneClickLength]
 Class="Function"
-Prototype="int ConvertLength(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+Prototype="int OneClickLength(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
 [OneClickRange]
 Class="Function"
 Prototype="int OneClickRange(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
-[menuHelp]
+[saveData]
 Class="Function"
-Prototype="void menuHelp(int menuBar, int menuItem, void *callbackData, int panel);"
+Prototype="void saveData();"
 
-[menuAbout]
+[displayRS232Error]
 Class="Function"
-Prototype="void menuAbout(int menuBar, int menuItem, void *callbackData, int panel);"
+Prototype="void displayRS232Error(int RS232Error);"
 
-[SaveData]
+[dispXstopMsg]
 Class="Function"
-Prototype="void SaveData();"
+Prototype="void dispXstopMsg();"
 
-[DisplayRS232Error]
+[plotResponse]
 Class="Function"
-Prototype="void DisplayRS232Error(int RS232Error);"
+Prototype="void plotResponse(int sweep_type, double mean_amp, double fiber_length, double range);"
 
-[DispXstopMsg]
+[setPrecision]
 Class="Function"
-Prototype="void DispXstopMsg();"
+Prototype="double setPrecision(int choice, double value);"
 
-[PlotResponse]
+[setUnitOfLength]
 Class="Function"
-Prototype="void PlotResponse(int sweep_type, double mean_amp, double fiber_length, double range);"
+Prototype="double setUnitOfLength(int choice, double value, int toggle);"
 
-[SetPrecision_D]
+[setPrecisionOfPanel]
 Class="Function"
-Prototype="double SetPrecision_D(int choice, double X);"
+Prototype="void setPrecisionOfPanel(int choice);"
 
-[ConvertUnit_M]
+[checkPower]
 Class="Function"
-Prototype="double ConvertUnit_M(int choice, double X);"
+Prototype="void checkPower(int comPort, double mean_amp);"
 
-[ConvertUnit_MS]
+[updateUseTime]
 Class="Function"
-Prototype="double ConvertUnit_MS(int choice, double X);"
+Prototype="void updateUseTime();"
 
-[ConvertPrecision_D]
+[checkLicense]
 Class="Function"
-Prototype="void ConvertPrecision_D(int choice);"
+Prototype="int checkLicense(char license[4][5], char ODM_Name[19], int *date, int *licNum);"
 
-[PowerCaution]
+[setLanguage]
 Class="Function"
-Prototype="void PowerCaution(int comPort, double mean_amp);"
-
-[GetProbTime]
-Class="Function"
-Prototype="void GetProbTime();"
-
-[OpenAPP]
-Class="Function"
-Prototype="void OpenAPP(int menuBar, int menuItem, void *callbackData, int panel);"
-
-[TransENG]
-Class="Function"
-Prototype="void TransENG(int menuBar, int menuItem, void *callbackData, int panel);"
-
-[TransCHN]
-Class="Function"
-Prototype="void TransCHN(int menuBar, int menuItem, void *callbackData, int panel);"
+Prototype="void setLanguage(int Language, int menuBar);"
 

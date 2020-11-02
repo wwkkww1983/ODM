@@ -2,6 +2,10 @@
 Class="Function"
 Prototype="int ConnectVNA();"
 
+[GetReadyStateVNA]
+Class="Function"
+Prototype="int GetReadyStateVNA();"
+
 [DisconnectVNA]
 Class="Function"
 Prototype="int DisconnectVNA();"

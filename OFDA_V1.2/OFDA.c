@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 	int error = 0;
 
 	FILE *fp;
-	fp = fopen("C:\\ProgramData\\ODM\\APD\\version.dll", "rb");
+	fp = fopen("C:\\ProgramData\\ODM\\version.dll", "rb");
 	fscanf(fp, "%d\n", &error);
 	fclose(fp);
 
@@ -119,7 +119,7 @@ int CVICALLBACK panelCB(int panel, int event, void *callbackData,
 	{
 		stopMeasure();
 		FILE *fp;
-		fp = fopen("C:\\ProgramData\\ODM\\APD\\version.dll", "wb");
+		fp = fopen("C:\\ProgramData\\ODM\\version.dll", "wb");
 		fprintf(fp, "%d\n", 5);
 		fclose(fp);
 		QuitUserInterface(0);

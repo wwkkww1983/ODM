@@ -1,6 +1,6 @@
 [GetInstrCom]
 Class="Function"
-Prototype="int GetInstrCom(int *comPort);"
+Prototype="int GetInstrCom(int *comPort, char ODM_Name[19]);"
 
 [ReadTemp]
 Class="Function"

@@ -1,7 +1,7 @@
-#include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
+#include "D:\ToolKit\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
 
-2 ICON "d:\\1-Newkey_Photonics【20200530】\\2-我参与的项目\\1-ODM\\11-软件\\OFDA_V6\\OFDA_V6.1限制5km-反射直通量程一样\\OFDA_V1.2\\favicon.ico"
-1 24 "d:\\1-Newkey_Photonics【20200530】\\2-我参与的项目\\1-ODM\\11-软件\\OFDA_V6\\OFDA_V6.1限制5km-反射直通量程一样\\OFDA_V1.2\\cvibuild.OFDA\\Release\\manifest.xml"
+2 ICON "d:\\WorkProject\\614Project\\ODM\\OFDA_V6_2 - 授权机制改动\\OFDA_V1.2\\favicon.ico"
+1 24 "d:\\WorkProject\\614Project\\ODM\\OFDA_V6_2 - 授权机制改动\\OFDA_V1.2\\cvibuild.OFDA\\Release\\manifest.xml"
 
 
 STRINGTABLE DISCARDABLE

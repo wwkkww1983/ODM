@@ -1,4 +1,2 @@
 
-CallCC.bat 3 "d:\1-Newkey_Photonics\2-我参与的项目\1-ODM\11-软件\OFDA_V6\OFDA_V6_2 - 无限制\OFDA_main.c" "d:\1-Newkey_Photonics\2-我参与的项目\1-ODM\11-软件\OFDA_V6\OFDA_V6_2 - 无限制\cvibuild.OFDA_V6\Release\OFDA_main.obj" "d:\1-Newkey_Photonics\2-我参与的项目\1-ODM\11-软件\OFDA_V6\OFDA_V6_2 - 无限制\cvibuild.OFDA_V6\Release\OFDA_main.obj.cvidefprots" "d:\1-Newkey_Photonics\2-我参与的项目\1-ODM\11-软件\OFDA_V6\OFDA_V6_2 - 无限制\cvibuild.OFDA_V6\Release\OFDA_main.obj.out" 
-
 CallLink.bat -cmd:link_options.txt
