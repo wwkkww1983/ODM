@@ -1,6 +1,6 @@
 [Workspace Header]
 Version = 1700
-Pathname = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/OFDA_V6.cws"
+Pathname = "/d/WorkProject/614Project/ODM/OFDA_V6/OFDA_V6.cws"
 CVI Dir = "/d/toolkit/national instruments/cvi2017"
 CVI Shared Dir = "/D/ToolKit/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2017"
@@ -17,7 +17,7 @@ Window Top = 75
 Window Left = 157
 Window Bottom = 788
 Window Right = 1423
-Maximized = True
+Maximized = False
 Maximized Children = True
 Max32 Number Of Errors = 20
 Track Include File Dependencies = True
@@ -30,7 +30,7 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 6
+Number of Opened Files = 4
 Window Confinement Region Enabled = True
 MainColumnWidth = 143
 FileDateColumnWidth = 70
@@ -46,127 +46,123 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/d/toolkit/national instruments/cvi2017/toolslib/custctrl/pwctrl.fp"
+Path = "/d/ToolKit/National Instruments/CVI2017/toolslib/custctrl/pwctrl.fp"
 File Type = "Function Panel"
 Disk Date = 3573565200
 In Projects = "1,"
 
 [File 0002]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/OFDA_main.c"
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/OFDA_main.c"
 File Type = "CSource"
-Disk Date = 3687174061
+Disk Date = 3687658977
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Window Z-Order = 1
-Source Window State = "1,0,2019,0,0,0,0,0,0,224,0,2018,0,2018,0,40,1962,0,2018,0,323,601,1,40,"
+Source Window State = "1,68,68,68,14,23,14,0,0,224,0,2024,0,2024,0,40,82,0,136,34,323,601,1,40,"
 
 [File 0003]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/OFDA_V6.uir"
-File Type = "User Interface Resource"
-Disk Date = 3686982504
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Window Height = 323
-Window Width = 517
-Window Z-Order = 2
-
-[File 0004]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/OFDA_V6.h"
-File Type = "Include"
-Disk Date = 3686975647
-In Projects = "1,"
-Window Top = 188
-Window Left = 90
-Window Z-Order = 6
-Source Window State = "1,144,144,144,17,36,36,0,3,80,0,0,0,0,0,25,113,0,144,17,323,517,1,0,"
-
-[File 0005]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/Device.c"
-File Type = "CSource"
-Disk Date = 3687063970
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 3
-Source Window State = "1,83,83,83,4,10,10,0,0,94,0,289,0,289,0,25,63,0,28,16,323,601,1,0,"
-
-[File 0006]
 Path = "/d/ToolKit/National Instruments/CVI2017/include/formatio.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
 Window Top = 126
 Window Left = 58
-Window Z-Order = 5
+Window Z-Order = 4
 Source Window State = "1,76,76,76,24,35,35,0,3,123,0,0,0,0,0,25,64,0,76,24,323,775,1,0,"
 
-[File 0007]
+[File 0004]
 Path = "/d/ToolKit/National Instruments/CVI2017/toolslib/toolbox/toolbox.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
 Window Top = 157
 Window Left = 74
-Window Z-Order = 4
+Window Z-Order = 3
 Source Window State = "1,0,0,0,0,0,0,0,0,123,0,0,0,0,0,25,408,0,439,61,323,775,1,0,"
 
-[File 0008]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/include/constant.h"
+[File 0005]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/Device.c"
+File Type = "CSource"
+Disk Date = 3687177568
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 2
+Source Window State = "1,83,83,83,4,10,10,0,0,94,0,289,0,289,0,25,69,0,86,20,323,601,1,0,"
+
+[File 0006]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/include/constant.h"
 File Type = "Include"
-Disk Date = 3681455203
+Disk Date = 3687177568
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
 Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,42,4,323,601,1,0,"
 
-[File 0009]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/include/Device.h"
+[File 0007]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/include/Device.h"
 File Type = "Include"
-Disk Date = 3683545064
+Disk Date = 3687177568
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0010]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/include/DSP.h"
+[File 0008]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/include/DSP.h"
 File Type = "Include"
-Disk Date = 3681455230
+Disk Date = 3687177568
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
 Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,29,323,601,1,0,"
 
-[File 0011]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/include/TRVNA.h"
+[File 0009]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/OFDA_V6.h"
 File Type = "Include"
-Disk Date = 3681455281
+Disk Date = 3687177568
+In Projects = "1,"
+Window Top = 188
+Window Left = 90
+Source Window State = "1,144,144,144,17,36,36,0,3,0,0,0,0,0,0,0,113,0,144,17,323,517,1,0,"
+
+[File 0010]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/include/TRVNA.h"
+File Type = "Include"
+Disk Date = 3687177568
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0012]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/DSP.c"
+[File 0011]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/DSP.c"
 File Type = "CSource"
-Disk Date = 3681455226
+Disk Date = 3687177568
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
 Source Window State = "1,56,56,56,4,14,14,0,3,0,0,0,0,0,0,0,0,0,56,4,323,601,1,0,"
 
-[File 0013]
-Path = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/TRVNA.c"
+[File 0012]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/src/TRVNA.c"
 File Type = "CSource"
-Disk Date = 3681455271
+Disk Date = 3687177568
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
+[File 0013]
+Path = "/d/WorkProject/614Project/ODM/OFDA_V6/OFDA_V6.uir"
+File Type = "User Interface Resource"
+Disk Date = 3687177568
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Height = 323
+Window Width = 517
+
 [Tab Order]
-Tab 0001 = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/OFDA_main.c"
-Tab 0002 = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/OFDA_V6.uir"
-Tab 0003 = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/src/Device.c"
-Tab 0004 = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/OFDA_V6.h"
-Tab 0005 = "/d/ToolKit/National Instruments/CVI2017/include/formatio.h"
-Tab 0006 = "/d/ToolKit/National Instruments/CVI2017/toolslib/toolbox/toolbox.h"
+Tab 0001 = "/d/ToolKit/National Instruments/CVI2017/include/formatio.h"
+Tab 0002 = "/d/ToolKit/National Instruments/CVI2017/toolslib/toolbox/toolbox.h"
+Tab 0003 = "/d/WorkProject/614Project/ODM/OFDA_V6/src/OFDA_main.c"
+Tab 0004 = "/d/WorkProject/614Project/ODM/OFDA_V6/src/Device.c"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
@@ -261,6 +257,6 @@ Watch Expression = "GetProbTime"
 
 [Distributions]
 Active Index = 1
-AbsCDSPath 0001 = "/d/WorkProject/614Project/ODM/OFDA_V6_2 - 授权机制改动/OFDA_V6.cds"
+AbsCDSPath 0001 = "/d/WorkProject/614Project/ODM/OFDA_V6/OFDA_V6.cds"
 RelCDSPath 0001 = "OFDA_V6.cds"
 

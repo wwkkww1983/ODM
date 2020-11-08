@@ -1,2 +1,0 @@
-
-CallLink.bat -cmd:link_options.txt

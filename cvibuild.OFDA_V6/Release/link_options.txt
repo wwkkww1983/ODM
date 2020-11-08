@@ -1,20 +1,20 @@
 -nologo
--out:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\OFDA_V6.exe
+-out:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\OFDA_V6.exe
 -arch:x86
 -timestamp
--res:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\resources.res
+-res:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\resources.res
 -entry:_CVIWinMainStartupCode@0
 -base:0x400000
--linked:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\linkersummary.txt
--dlldeps:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\dlldependencies.txt
--licensing:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\linkerlicensing.txt
--browsedeps:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\moduledependencies.txt
+-linked:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\linkersummary.txt
+-dlldeps:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\dlldependencies.txt
+-licensing:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\linkerlicensing.txt
+-browsedeps:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\moduledependencies.txt
 -stackreserve:1048576
 -stackcommit:4096
--in:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\Device.obj
--in:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\DSP.obj
--in:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\OFDA_main.obj
--in:d:\WorkProject\614Project\ODM\OFDA_V6_2 - 授权机制改动\cvibuild.OFDA_V6\Release\TRVNA.obj
+-in:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\Device.obj
+-in:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\DSP.obj
+-in:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\OFDA_main.obj
+-in:d:\WorkProject\614Project\ODM\OFDA_V6\cvibuild.OFDA_V6\Release\TRVNA.obj
 -more:d:\toolkit\national instruments\cvi2017\bin\msvc\cvistart.lib
 -more:d:\toolkit\national instruments\cvi2017\bin\msvc\cvi.lib
 -more:D:\Download\Windows Kits\8.1\Lib\winv6.3\um\x86\advapi32.lib

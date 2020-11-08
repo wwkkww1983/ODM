@@ -122,11 +122,14 @@ int main(int argc, char *argv[])
         fp = fopen("C:\\ProgramData\\ODM\\conf.dll", "r");
         fscanf(fp, "%d\n", &maxLengthIndex);
         fscanf(fp, "%d\n", &noComPort);
+		fscanf(fp, "%lf\n", &calIL1550);
+        fscanf(fp, "%lf\n", &calIL1310);
         fclose(fp);
         SetFileAttributes("C:\\ProgramData\\ODM\\conf.dll", FILE_ATTRIBUTE_HIDDEN);
     }
 
     //--------------------------------授权校验------------------------------------
+	
     // 若是第一次使用，则直接弹出激活界面，开始验证
     if (GetFileInfo("C:\\ProgramData\\ODM\\lic.dll", &size) == 0 || GetFileInfo("C:\\ProgramData\\ODM\\licId.dll", &size) == 0)
     {
@@ -345,8 +348,9 @@ int CVICALLBACK panelADM(int panel, int event, void *callbackData,
 }
 
 //==============================================================================
-// -----------------------------菜单回调函数-------------------------------------
-// ------------------------------菜单 - 文件-------------------------------------
+// -----------------------------菜单回调函数------------------------------------
+
+// ------------------------------菜单 - 文件------------------------------------
 // 文件 - 保存数据
 void CVICALLBACK menuSave(int menuBar, int menuItem, void *callbackData,
                           int panel)
@@ -527,6 +531,7 @@ void CVICALLBACK menuRegister(int menuBar, int menuItem, void *callbackData,
 
 //================================================================================
 //-----------------------------各面板控件回调函数---------------------------------
+
 // 切换测量方式，直通或反射
 int CVICALLBACK OneClickMode(int panel, int control, int event,
                              void *callbackData, int eventData1, int eventData2)
@@ -951,6 +956,7 @@ int CVICALLBACK OneClickRange(int panel, int control, int event,
 
 //================================thread function=========================================//
 //===================================计算线程==============================================//
+
 static int CVICALLBACK ThreadFunction(void *functionData)
 {
     // ----------------------进行设备检测与初始化，在界面上进行提示--------------------------
