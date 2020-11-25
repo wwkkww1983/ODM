@@ -1,7 +1,7 @@
 #include "D:\ToolKit\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
 
-2 ICON "d:\\WorkProject\\614Project\\ODM\\OFDA_V6_2 - 授权机制改动\\src\\include\\favicon.ico"
-1 24 "d:\\WorkProject\\614Project\\ODM\\OFDA_V6_2 - 授权机制改动\\cvibuild.OFDA_V6\\Debug\\manifest.xml"
+2 ICON "d:\\WorkProject\\614Project\\ODM\\OFDA_V6\\src\\include\\favicon.ico"
+1 24 "d:\\WorkProject\\614Project\\ODM\\OFDA_V6\\cvibuild.OFDA_V6\\Debug\\manifest.xml"
 
 
 STRINGTABLE DISCARDABLE

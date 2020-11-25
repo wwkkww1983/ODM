@@ -170,3 +170,11 @@ Prototype="int checkLicense(char license[4][5], char ODM_Name[19], int *date, in
 Class="Function"
 Prototype="void setLanguage(int Language, int menuBar);"
 
+[setDevice]
+Class="Function"
+Prototype="int setDevice();"
+
+[setVNA]
+Class="Function"
+Prototype="int setVNA();"
+

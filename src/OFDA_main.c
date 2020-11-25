@@ -99,6 +99,8 @@ static void setPrecisionOfPanel(int);            //precision=0.1mm,0.0001m......
 static void updateUseTime(void);
 static int checkLicense(char license[4][5], char ODM_Name[19], int *date, int *licNum);
 static void setLanguage(int Language, int menuBar);
+static int setVNA();
+static int setDevice();
 //==============================================================================
 
 int main(int argc, char *argv[])
@@ -122,14 +124,14 @@ int main(int argc, char *argv[])
         fp = fopen("C:\\ProgramData\\ODM\\conf.dll", "r");
         fscanf(fp, "%d\n", &maxLengthIndex);
         fscanf(fp, "%d\n", &noComPort);
-		fscanf(fp, "%lf\n", &calIL1550);
+        fscanf(fp, "%lf\n", &calIL1550);
         fscanf(fp, "%lf\n", &calIL1310);
         fclose(fp);
         SetFileAttributes("C:\\ProgramData\\ODM\\conf.dll", FILE_ATTRIBUTE_HIDDEN);
     }
 
     //--------------------------------授权校验------------------------------------
-	
+
     // 若是第一次使用，则直接弹出激活界面，开始验证
     if (GetFileInfo("C:\\ProgramData\\ODM\\lic.dll", &size) == 0 || GetFileInfo("C:\\ProgramData\\ODM\\licId.dll", &size) == 0)
     {
@@ -263,7 +265,7 @@ int CVICALLBACK panelCB(int panel, int event, void *callbackData,
     {
 
         meaStatus = OFF; //测量软件关闭时候的操作
-        initStatus &&CmtWaitForThreadPoolFunctionCompletion(DEFAULT_THREAD_POOL_HANDLE, threadFunctionId, OPT_TP_PROCESS_EVENTS_WHILE_WAITING);
+        initStatus == OFF &&CmtWaitForThreadPoolFunctionCompletion(DEFAULT_THREAD_POOL_HANDLE, threadFunctionId, OPT_TP_PROCESS_EVENTS_WHILE_WAITING);
         CmtReleaseThreadPoolFunctionID(DEFAULT_THREAD_POOL_HANDLE, threadFunctionId);
         DiscardPanel(panelHandle);
         Delay(0.1);
@@ -960,86 +962,14 @@ int CVICALLBACK OneClickRange(int panel, int control, int event,
 static int CVICALLBACK ThreadFunction(void *functionData)
 {
     // ----------------------进行设备检测与初始化，在界面上进行提示--------------------------
-
-    //int licNum;
-    SetCtrlVal(panelHandle, PANEL_TEXT_Caution, "系统正在初始化");
-    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
-
-    // 检测并尝试连接串口，最大 10 秒
-    if (!noComPort)
+    if (setDevice() != 0)
     {
-        for (int i = 0; i < 20; i++)
-        {
-            if (i % 2 == 0)
-            {
-                SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
-            }
-            else
-            {
-                SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
-            }
-
-            if (GetInstrCom(&comPort, ODM_Name) == 0)
-            {
-                break;
-            }
-            else if (i == 19)
-            {
-                MessagePopup("Error", "设备连接超时！");
-                exit(0);
-            }
-
-            Delay(0.5);
-        }
-    }
-
-    if (checkLicense(license, ODM_Name, &activateDays, &licNum) != 0)
-    {
-        MessagePopup("Error", "设备未获得授权");
-        devPanelHandle = LoadPanel(0, "OFDA_V6.uir", PANEL_DEV);
-        DisplayPanel(devPanelHandle);
-        panelStatus[2] = 1;
         return -1;
     }
 
-    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
-
-    // 检测 VNA 连接
-    if (ConnectVNA() != 0)
+    if (setVNA() != 0)
     {
-        MessagePopup("Error", "系统连接错误！");
-        exit(0);
-    }
-
-    // 获取 VNA Ready 状态，Ready 完成后再进行下一步设置和测量
-    for (int i = 0; i < 24; i++)
-    {
-        if (i % 2 == 0)
-        {
-            SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
-        }
-        else
-        {
-            SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
-        }
-
-        if (GetReadyStateVNA() != 0)
-        {
-            break;
-        }
-        else if (i == 23)
-        {
-            MessagePopup("Error", "系统连接超时！");
-            exit(0);
-        }
-
-        Delay(0.5);
-    }
-
-    if (IniVNA() != 0)
-    {
-        MessagePopup("Error", "系统初始化错误！");
-        exit(0);
+        return -1;
     }
 
     // 设备初始化
@@ -1062,10 +992,7 @@ static int CVICALLBACK ThreadFunction(void *functionData)
     SetOS2(comPort, THROUGH);
     Delay(0.05);
 
-    SetCtrlVal(panelHandle, PANEL_TEXT_Caution, "接收光功率低！");
-    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
-
-    initStatus = 1;
+    initStatus = OFF;
     // ----------------------------------初始化结束-------------------------------------
     int ring_wl_value,
         ring_mode_value,
@@ -1133,22 +1060,29 @@ static int CVICALLBACK ThreadFunction(void *functionData)
         // 每20次循环检查一遍串口和 VNA 的连接情况
         if (!noComPort && ++RS232CheckNum && RS232CheckNum % 20 == 0)
         {
+            RS232CheckNum = 0;
             // 检查串口是否连接
             RS232Error = OpenComConfig(comPort, "", 9600, 0, 8, 1, 1, 4);
             if (RS232Error != 0)
             {
-                MessagePopup("Error", "串口丢失，请检查后重启软件!");
-                exit(0);
+                //MessagePopup("Error", "串口丢失，尝试重连!");
+                if (setDevice() != 0)
+                {
+                    return -1;
+                }
             }
 
             // 检查鉴相模块是否连接
             RS232Error = GetReadyStateVNA();
+
             if (RS232Error == 0)
             {
-                MessagePopup("Error", "系统连接错误，请检查后重启软件!");
-                exit(0);
+                //MessagePopup("Error", "系统连接错误，尝试重连!");
+                if (setVNA() != 0)
+                {
+                    return -1;
+                }
             }
-            RS232CheckNum = 0;
         }
 
         // ---------------------用户使用时间检测--------------------------
@@ -1885,7 +1819,7 @@ int checkLicense(char license[4][5], char ODM_Name[19], int *date, int *licNum)
     // 获取本机电路板序号
     char localId[7] = {0};
 
-    noComPort &&strcpy(ODM_Name, "ODM-S-D1000-190808"); // 修改ODM_Name,测试用
+    noComPort && strcpy(ODM_Name, "ODM-S-D1000-190808"); // 修改ODM_Name,测试用
 
     for (int i = 0; i < 6; i++)
     {
@@ -2021,4 +1955,101 @@ void setLanguage(int Language, int menuBar)
     {
         SetCtrlAttribute(calRefractionPanelHandle, calRefractionPanelInput[i], ATTR_LABEL_TEXT, calRefractionPanelInputInfo[Language][i]);
     }
+}
+
+// 初始化连接串口
+int setDevice()
+{
+    SetCtrlVal(panelHandle, PANEL_TEXT_Caution, "系统正在初始化");
+    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
+
+    // 检测并尝试连接串口，最大 10 秒
+    if (!noComPort)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            if (i % 2 == 0)
+            {
+                SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
+            }
+            else
+            {
+                SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
+            }
+
+            if (GetInstrCom(&comPort, ODM_Name) == 0)
+            {
+                break;
+            }
+            else if (i == 19)
+            {
+                MessagePopup("Error", "设备连接超时！");
+                return -1;
+            }
+
+            Delay(0.5);
+        }
+    }
+
+    if (checkLicense(license, ODM_Name, &activateDays, &licNum) != 0)
+    {
+        MessagePopup("Error", "设备未获得授权");
+        devPanelHandle = LoadPanel(0, "OFDA_V6.uir", PANEL_DEV);
+        DisplayPanel(devPanelHandle);
+        panelStatus[2] = 1;
+        return -1;
+    }
+
+    SetCtrlVal(panelHandle, PANEL_TEXT_Caution, "接收光功率低！");
+    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
+    return 0;
+}
+
+// 连接 VNA
+int setVNA()
+{
+    SetCtrlVal(panelHandle, PANEL_TEXT_Caution, "系统正在初始化");
+    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
+    // 检测 VNA 连接
+    if (ConnectVNA() != 0)
+    {
+        MessagePopup("Error", "系统连接错误！");
+        return -1;
+    }
+
+    // 获取 VNA Ready 状态，Ready 完成后再进行下一步设置和测量
+    for (int i = 0; i < 24; i++)
+    {
+        if (i % 2 == 0)
+        {
+            SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_YELLOW);
+        }
+        else
+        {
+            SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
+        }
+
+        if (GetReadyStateVNA() != 0)
+        {
+            break;
+        }
+        else if (i == 23)
+        {
+            MessagePopup("Error", "系统连接超时！");
+            return -1;
+        }
+
+        Delay(0.5);
+    }
+
+    if (IniVNA() != 0)
+    {
+        MessagePopup("Error", "系统初始化错误！");
+        return -1;
+    }
+
+    SetCtrlVal(panelHandle, PANEL_TEXT_Caution, "接收光功率低！");
+    SetCtrlAttribute(panelHandle, PANEL_TEXT_Caution, ATTR_TEXT_COLOR, VAL_BLACK);
+
+    return 0;
 }
