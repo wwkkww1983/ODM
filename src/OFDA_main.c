@@ -1,5 +1,4 @@
 
-
 //==============================================================================
 //
 // Title:		OFDA
@@ -987,11 +986,6 @@ static int CVICALLBACK ThreadFunction(void *functionData)
     Sendbyte(comPort, 0x41);
     Delay(0.01); //开启VNA供电  **************************默认VNA常闭状态
 
-    SetOS1(comPort, WL1550);
-    Delay(0.05);
-    SetOS2(comPort, THROUGH);
-    Delay(0.05);
-
     initStatus = OFF;
     // ----------------------------------初始化结束-------------------------------------
     int ring_wl_value,
@@ -1263,7 +1257,8 @@ static int CVICALLBACK ThreadFunction(void *functionData)
                 calMag = amp[TraceLen - 1];
                 CalVNA(ON);
                 SetCtrlVal(panelHandle, PANEL_VALUE_Calibration, TextON);
-                GetCtrlVal(panelHandle, PANEL_TEXT_TempDiffer, calTemp);
+                GetCtrlVal(panelHandle, PANEL_VALUE_TempDiffer, calTemp);
+                printf("%s\n", calTemp);
             }
             break;
         case OFF:
@@ -1819,7 +1814,7 @@ int checkLicense(char license[4][5], char ODM_Name[19], int *date, int *licNum)
     // 获取本机电路板序号
     char localId[7] = {0};
 
-    noComPort && strcpy(ODM_Name, "ODM-S-D1000-190808"); // 修改ODM_Name,测试用
+    noComPort &&strcpy(ODM_Name, "ODM-S-D1000-190808"); // 修改ODM_Name,测试用
 
     for (int i = 0; i < 6; i++)
     {

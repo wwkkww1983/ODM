@@ -52,7 +52,7 @@ int GetInstrCom(int *comPort, char ODM_Name[19])
             }
         }
     }
-    return 1;
+    return 0;
 }
 
 int ReadTemp(int comPort, char *temp_data)
@@ -135,7 +135,7 @@ int SetOS1(int comPort, int OSstatus)
     }
     Delay(0.005);
     //	CloseCom (comPort);
-    return 1;
+    return 0;
 }
 
 int SetOS2(int comPort, int OSstatus)
@@ -163,7 +163,7 @@ int SetOS2(int comPort, int OSstatus)
     }
     Delay(0.005);
     //	CloseCom (comPort);
-    return 1;
+    return 0;
 }
 
 int Sendbyte(int comPort, int sendByte)
@@ -179,7 +179,7 @@ int Sendbyte(int comPort, int sendByte)
     ComWrtByte(comPort, sendByte);
     Delay(0.005);
     //	CloseCom (comPort);
-    return 1;
+    return 0;
 }
 
 //---------------以下皆为过期功能，未调用----------------
@@ -238,7 +238,7 @@ int CautionLight(int comPort, int sendByte)
     ComWrtByte(comPort, sendByte);
     Delay(0.001);
     CloseCom(comPort);
-    return 1;
+    return 0;
 }
 
 int ReadOS1(int comPort, int *OSstatus)
