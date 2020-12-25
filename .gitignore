@@ -1,5 +1,5 @@
-/cvibuild*OFDA_V6/
-/distribution/
+cvibuild.*/
+distribution/
 *.exe
 *.cws
 *.cds
